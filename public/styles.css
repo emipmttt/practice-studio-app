@@ -1,0 +1,74 @@
+:root {
+    --just-white: #FFFFFF;
+    --main-black: #262020;
+    --warm-black: #111111;
+    --roth-yellow: #fdca4a;
+}
+body {
+    padding: 0;
+    margin: 4pxpx;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    color: var(--just-white);
+    background: var(--warm-black);
+    display: flex;
+    justify-content: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main img{
+    width: 120px;
+    margin-top: 28px;
+}
+#addSongForm{
+    margin-bottom: 32px; 
+    padding-bottom: 32px; 
+    border-bottom: solid 1px var(--main-black);
+}
+
+#inputSong {
+    border: none;
+    background: var(--main-black);
+    height: 32px;
+    margin: 0 8px;
+    color: var(--roth-yellow);
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+#addSongForm label {
+    font-weight: 800;
+}
+
+#addSongForm button {
+    width: 150px;
+    height: 28px;
+    border-radius: 15px;
+    background: var(--roth-yellow);
+    font-family: 'Outfit', sans-serif;
+    border: none;
+    transition: .2s;
+    cursor: pointer;
+}
+#addSongForm button:hover{
+    box-shadow: 1px -1px 4px 2px rgba(66,54,54,0.49) inset;
+    -webkit-box-shadow: 1px -1px 4px 2px rgba(66,54,54,0.49) inset;
+    -moz-box-shadow: 1px -1px 4px 2px rgba(66,54,54,0.49) inset;
+}
+
+@media (max-width: 500px){
+    #addSongForm{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
