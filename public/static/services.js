@@ -55,9 +55,9 @@ const unsubscribe = onSnapshot(q, (querySnapshot) => {
       return input;
     };
 
-    const duncan = document.createElement("td");
-    duncan.appendChild(createInput("duncan"));
-    row.appendChild(duncan);
+    // const duncan = document.createElement("td");
+    // duncan.appendChild(createInput("duncan"));
+    // row.appendChild(duncan);
 
     const ivan = document.createElement("td");
     ivan.appendChild(createInput("ivan"));
@@ -81,6 +81,9 @@ const unsubscribe = onSnapshot(q, (querySnapshot) => {
     });
     removeSong.appendChild(removeSongButton);
     row.appendChild(removeSong);
+    if (song.ivan && song.emiliano && song.christian) {
+      row.setAttribute("class", "ready");
+    }
 
     songList.appendChild(row);
   });
